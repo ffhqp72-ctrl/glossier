@@ -3,46 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <title>Glossier</title>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/responsive.css">
-    <script src="./scripts/common.js" defer></script>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/common.js" defer></script>
 </head>
 <body>
     <div id="wrap">
         <header>
-            <div id="top_bnr">
-                <p>₩ 180,000 이상 구매 시 <span>무료 특급 배송.</span> 배송일정에 대한 자세한 안내는 <a href="#">배송일정안내</a>에서 확인 가능합니다.</p>
-            </div>
-            <nav id="gnb">
-                <h1><a href="#" id="logo"><img src="#" alt="Glossier"></a></h1>
-                <ul class="category">
-                    <li><a href="#">SHOP ALL</a></li>
-                    <li><a href="#">SKINCARE</a></li>
-                    <li><a href="#">MAKEUP</a></li>
-                    <li><a href="#">BODY</a></li>
-                    <li><a href="#">FRAGRANCE</a></li>
-                    <li><a href="#">GOODS</a></li>
-                </ul>
-                <div id="user_service">
-                    <a href="#"><img src="#" alt="검색"></a>
-                    <a href="#"><img src="#" alt="언어설정"></a>
-                    <a href="#"><img src="#" alt="매장위치"></a>
-                    <a href="#"><img src="#" alt="마이페이지"></a>
-                    <a href="#"><img src="#" alt="장바구니"></a>
+            <div id="fix_area">
+                <div id="top_bnr">
+                    <div class="bnr_wrap">
+                        <p>
+                            ₩ 180,000 이상 구매 시 <span>무료 특급 배송.</span>
+                            배송일정에 대한 자세한 안내는
+                            <a href="#">배송일정안내</a>에서 확인 가능합니다.
+                        </p>
+                        <div class="play_btn" role="group" aria-label="배너 컨트롤">
+                            <button class="prev" aria-label="이전 배너">
+                                <img src="./images/common/left_ios.png" alt="">
+                            </button>
+                            <button class="next" aria-label="다음 배너">
+                                <img src="./images/common/right_ios.png" alt="">
+                            </button>
+                            <button class="toggle-play" aria-label="배너 멈춤" aria-pressed="true">
+                                <img src="./images/common/stop.png" alt="">
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-            <video src="#" id="hero_bnr" autoplay muted loop></video>
+                <!-- <div id="top_bnr">
+                    <div class="bnr_wrap">
+                        <p>₩ 180,000 이상 구매 시 <span>무료 특급 배송.</span> 배송일정에 대한 자세한 안내는 <a href="#">배송일정안내</a>에서 확인 가능합니다.</p> -->
+                        <!-- <p>Glossier 온라인에서 구매한 상품은 미국 LA 매장에서 출고 되어 배송 됩니다. </p> -->
+                        <!-- <div>
+                            <button class="prev"><img src="./images/common/left_ios.png" alt="이전"></button>
+                            <button class="next"><img src="./images/common/right_ios.png" alt="다음"></button>
+                            <button class="stop"><img src="./images/common/stop.png" alt="멈춤"></button>
+                            <button class="play"><img src="./images/common/play.png" alt="재생"></button>
+                        </div>
+                    </div>
+                </div> -->
+                <nav id="gnb">
+                    <h1><a href="#" id="logo"><img src="./images/common/Glossier-logo-white.png" alt="Glossier"></a></h1>
+                    <ul class="category">
+                        <!-- depth 1 -->
+                        <li>
+                            <a href="#">SHOP ALL</a>
+                            <!-- depth 2 -->
+                            <ul class="depth2 shop_all">
+                                <li class="col">
+                                    <ul>
+                                        <li><a href="#">BEST SELLERS</a></li>
+                                        <li><a href="#">NEW</a></li>
+                                    </ul>
+                                </li>
+                                <!-- col 2 -->
+                                <li class="col">
+                                    <a href="#" class="category_title">ALL SKINCARE</a>
+                                    <ul class="menu_list">
+                                        <li><a href="#">CLEANSERS</a></li>
+                                        <li><a href="#">TREATMENTS</a></li>
+                                        <li><a href="#">SUNCARE</a></li>
+                                        <li><a href="#">MOISTURIZERS</a></li>
+                                        <li><a href="#">SKINCARE SETS</a></li>
+                                    </ul>
+                                </li>
+                                <!-- col 3 -->
+                                <li class="col">
+                                    <a href="#" class="category_title">ALL MAKEUP</a>
+                                    <ul class="menu_list">
+                                        <li><a href="#">FACE</a></li>
+                                        <li><a href="#">BROW</a></li>
+                                        <li><a href="#">EYE</a></li>
+                                        <li><a href="#">CHEEK</a></li>
+                                        <li><a href="#">LIP</a></li>
+                                        <li><a href="#">MAKEUP REMOVERS</a></li>
+                                        <li><a href="#">TOOLS</a></li>
+                                        <li><a href="#">MAKEUP SETS</a></li>
+                                    </ul>
+                                </li>
+                                <!-- col 4 -->
+                                <li class="col">
+                                    <a href="#" class="category_title">ALL BODY</a>
+                                    <ul class="menu_list">
+                                        <li><a href="#">LOTION</a></li>
+                                        <li><a href="#">BODY SPRITZ</a></li>
+                                        <li><a href="#">OIL WASH</a></li>
+                                        <li><a href="#">DEODORANTS</a></li>
+                                        <li><a href="#">BODY SETS</a></li>
+                                    </ul>
+                                </li>
+                                <!-- col 5 -->
+                                <li class="col">
+                                    <a href="#"class="category_title">ALL FRAGRANCE</a>
+                                    <ul class="menu_list">
+                                        <li><a href="#">GLOSSIER YOU</a></li>
+                                        <li><a href="#">GLOSSIER YOU FLEUR</a></li>
+                                        <li><a href="#">GLOSSIER YOU REVE</a></li>
+                                        <li><a href="#">GLOSSIER YOU DOUX</a></li>
+                                        <li><a href="#">CREME DE YOU</a></li>
+                                        <li><a href="#">FAGRANCE SETS</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">SKINCARE</a>
+                            <ul class="depth2">
+                                <li class="col">
+                                    <ul>
+                                        <li><a href="#">BEST SELLERS</a></li>
+                                        <li><a href="#">NEW</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col">
+                                    <a href="#" class="category_title">ALL SKINCARE</a>
+                                    <ul class="menu_list">
+                                        <li><a href="#">CLEANSERS</a></li>
+                                        <li><a href="#">TREATMENTS</a></li>
+                                        <li><a href="#">SUNCARE</a></li>
+                                        <li><a href="#">MOISTURIZERS</a></li>
+                                        <li><a href="#">SKINCARE SETS</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col">
+                                    <ul class="category_img">
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/common/gnbimg_01.png" alt="it item">
+                                                <p>IT ITEM</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./images/common/gnbimg_02.png" alt="MD PICK">
+                                                <p>MD PICK</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MAKEUP</a></li>
+                        <li><a href="#">BODY</a></li>
+                        <li><a href="#">FRAGRANCE</a></li>
+                        <li><a href="#">GOODS</a></li>
+                    </ul>
+                    <div id="user_service">
+                        <a href="#"><img src="./images/common/search_icon.svg" alt="검색"></a>
+                        <a href="#"><img src="./images/common/language_icon.png" alt="언어설정"></a>
+                        <a href="#"><img src="./images/common/map_icon.png" alt="매장위치"></a>
+                        <a href="#"><img src="./images/common/person_icon.png" alt="마이페이지"></a>
+                        <a href="#"><img src="./images/common/cart_off_icon.png" alt="장바구니"></a>
+                    </div>
+                </nav>
+            </div>
+            <video src="./video/glossier_video.mp4" id="hero_bnr" muted loop></video>
+            <!-- <video src="./video/glossier_video.mp4" id="hero_bnr" autoplay muted loop></video> -->
         </header>
         <main>
             <section id="brand_info">
                 <div class="img">
-                    <a href="#"><img src="#" alt="glow"></a>
-                    <a href="#"><img src="#" alt="nature"></a>
-                    <a href="#"><img src="#" alt="beauty"></a>
+                    <a href="#"><img src="./images/common/bnr01.jpg" alt="glow">
+                        <span class="hover_txt">GLOW</span>
+                    </a>
+                    <a href="#"><img src="./images/common/bnr02.png" alt="nature">
+                        <span class="hover_txt">NATURE</span>
+                    </a>
+                    <a href="#"><img src="./images/common/bnr03.jpg" alt="beauty">
+                        <span class="hover_txt">BEAUTY</span>
+                    </a>
                 </div>
                 <dl class="slogan">
                     <dt>"BEAUTY BUILT AROUND YOU."</dt>
@@ -55,51 +191,51 @@
                 </dl>
             </section>
             <section id="wear_glossier">
-                <img src="#" alt="wear_glossier">
+                <img src="./images/common/wearglossier.jpg" alt="wear_glossier">
                 <div class="contents">
-                    <div class="top">
-                        <div class="products product1">
-                            <a href="#">
-                                <img src="#" alt="Glossier you (50ml)">
-                                <div class="product_info">
-                                    <h1>Glossier you (50ml)</h1>
-                                    <h2>₩ 137,000</h2>
-                                    <p>SHOW MORE</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products product2">
-                            <a href="#">
-                                <img src="#" alt="Glossier Fluer (50ml)">
-                                <div class="product_info">
-                                    <h1>Glossier Fluer (50ml)</h1>
-                                    <h2>₩ 137,000</h2>
-                                    <p>SHOW MORE</p>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="products product1">
+                        <a href="#">
+                            <img class="img_default" src="./images/produt/glossier_you.jpg" alt="Glossier you (50ml)">
+                            <img class="img_hover" src="./images/produt/glossier_you2.jpg" alt="Glossier you (50ml)">
+                            <div class="product_info">
+                                <h1>Glossier you (50ml)</h1>
+                                <h2>₩ 137,000</h2>
+                                <p>SHOW MORE</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="bottom">
-                        <div class="products product3">
-                            <a href="#">
-                                <img src="#" alt="Glossier Doux (50ml)">
-                                <div class="product_info">
-                                    <h1>Glossier Doux (50ml)</h1>
-                                    <h2>₩ 137,000</h2>
-                                    <p>SHOW MORE</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="products product4">
-                            <a href="#">
-                                <img src="#" alt="Glossier Reve (50ml)">
-                                <div class="product_info">
-                                    <h1>Glossier Reve (50ml)</h1>
-                                    <h2>₩ 137,000</h2>
-                                    <p>SHOW MORE</p>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="products product2">
+                        <a href="#">
+                            <img class="img_default" src="./images/produt/glossier_fluer.jpg" alt="Glossier Fluer (50ml)">
+                            <img class="img_hover" src="./images/produt/glossier_fluer2.png" alt="Glossier Fluer (50ml)">
+                            <div class="product_info">
+                                <h1>Glossier Fluer (50ml)</h1>
+                                <h2>₩ 137,000</h2>
+                                <p>SHOW MORE</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="products product3">
+                        <a href="#">
+                            <img class="img_default" src="./images/produt/glossier_doux.jpg" alt="Glossier Doux (50ml)">
+                            <img class="img_hover" src="./images/produt/glossier_doux2.png" alt="Glossier Doux (50ml)">
+                            <div class="product_info">
+                                <h1>Glossier Doux (50ml)</h1>
+                                <h2>₩ 137,000</h2>
+                                <p>SHOW MORE</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="products product4">
+                        <a href="#">
+                            <img class="img_default" src="./images/produt/glossier_reve.jpg" alt="Glossier Reve (50ml)">
+                            <img class="img_hover" src="./images/produt//glossier_reve2.jpg" alt="Glossier Reve (50ml)">
+                            <div class="product_info">
+                                <h1>Glossier Reve (50ml)</h1>
+                                <h2>₩ 137,000</h2>
+                                <p>SHOW MORE</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -107,8 +243,8 @@
                 <div class="title">
                     <h1>BEST SELLER</h1>
                     <a href="#">
-                        더보기
-                        <img src="#" alt="더보기">
+                        MORE
+                        <img src="./images/common/more_icon.png" alt="더보기">
                     </a>
                 </div>
                 <div class="contents">
@@ -120,424 +256,355 @@
                         <li><a href="#">FRAGRANCE</a></li>
                         <li><a href="#">GOODS</a></li>
                     </ul>
-                    <ul class="products_all">
-                        <li class="bs_product perfume">
-                            <a href="#"><img src="#" alt="Glossier you"></a>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Glossier you</h1>
-                                    <p class="product_description">오드퍼퓸</p>
-                                </a>
-                                <div>
-                                    <div class="price">
-                                        <a href="#" class="size_50ml">₩ 137,000</a>
-                                        <a href="#" class="size_100ml">₩ 194,000</a>
-                                        <a href="#" class="size_8ml">₩ 53,700</a>
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide bs_product perfume">
+                                <div class="img">
+                                    <a href="#"><img src="./images/produt/glossier_you.jpg" alt="Glossier you"></a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Glossier you</h1>
+                                        <p class="product_description">오드퍼퓸</p>
+                                    </a>
+                                    <div>
+                                        <div class="price">
+                                            <a href="#" class="size_50ml">₩ 137,000</a>
+                                            <a href="#" class="size_100ml">₩ 194,000</a>
+                                            <a href="#" class="size_8ml">₩ 53,700</a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="#" class="size_50ml">50ml</a>
+                                            <a href="#" class="size_100ml">100ml</a>
+                                            <a href="#" class="size_8ml">8ml</a>
+                                        </div>
                                     </div>
-                                    <div class="option">
-                                        <a href="#" class="size_50ml">50ml</a>
-                                        <a href="#" class="size_100ml">100ml</a>
-                                        <a href="#" class="size_8ml">8ml</a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품" class="wish_list"></button>
+                                        <button type="button" aria-label="장바구니담기" class="cart"></button>
                                     </div>
                                 </div>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Futuredew">
+                                    </a>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Futuredew">
-                                    <!-- <div class="color">
-                                        <span class="`색상명`_color chip"></span>
-                                        <span class="espresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div> -->
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Futuredew</h1>
-                                    <p class="product_description">메이크업 하이브리드 세럼</p>
-                                    <div class="price">
-                                        <p>₩ 50,700</p>
-                                        <!-- <del>`원가`</del> -->
-                                    </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="bs_product perfume">
-                            <a href="#"><img src="#" alt="Glossier you Doux"></a>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Glossier you Doux</h1>
-                                    <p class="product_description">오드퍼퓸</p>
-                                </a>
-                                <div>
-                                    <div class="price">
-                                        <a href="#" class="size_50ml">₩ 137,000</a>
-                                        <a href="#" class="size_100ml">₩ 194,000</a>
-                                        <a href="#" class="size_8ml">₩ 53,700</a>
-                                    </div>
-                                    <div class="option">
-                                        <a href="#" class="size_50ml">50ml</a>
-                                        <a href="#" class="size_100ml">100ml</a>
-                                        <a href="#" class="size_8ml">8ml</a>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Futuredew</h1>
+                                        <p class="product_description">메이크업 하이브리드 세럼</p>
+                                        <div class="price">
+                                            <p>₩ 50,700</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
                                 </div>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
+                            </li>
+                            <li class="swiper-slide bs_product perfume">
+                                <div class="img">
+                                    <a href="#"><img src="#" alt="Glossier you Doux"></a>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product perfume">
-                            <a href="#"><img src="#" alt="Glossier you Fleur"></a>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Glossier you Fleur</h1>
-                                    <p class="product_description">오드퍼퓸</p>
-                                </a>
-                                <div>
-                                    <div class="price">
-                                        <a href="#" class="size_50ml">₩ 137,000</a>
-                                        <a href="#" class="size_100ml">₩ 194,000</a>
-                                        <a href="#" class="size_8ml">₩ 53,700</a>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Glossier you Doux</h1>
+                                        <p class="product_description">오드퍼퓸</p>
+                                    </a>
+                                    <div>
+                                        <div class="price">
+                                            <a href="#" class="size_50ml">₩ 137,000</a>
+                                            <a href="#" class="size_100ml">₩ 194,000</a>
+                                            <a href="#" class="size_8ml">₩ 53,700</a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="#" class="size_50ml">50ml</a>
+                                            <a href="#" class="size_100ml">100ml</a>
+                                            <a href="#" class="size_8ml">8ml</a>
+                                        </div>
                                     </div>
-                                    <div class="option">
-                                        <a href="#" class="size_50ml">50ml</a>
-                                        <a href="#" class="size_100ml">100ml</a>
-                                        <a href="#" class="size_8ml">8ml</a>
-                                    </div>
-                                </div>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="bs_product perfume">
-                            <a href="#"><img src="#" alt="Glossier you Reve"></a>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Glossier you Reve</h1>
-                                    <p class="product_description">오드퍼퓸</p>
-                                </a>
-                                <div>
-                                    <div class="price">
-                                        <a href="#" class="size_50ml">₩ 137,000</a>
-                                        <a href="#" class="size_100ml">₩ 194,000</a>
-                                        <a href="#" class="size_8ml">₩ 53,700</a>
-                                    </div>
-                                    <div class="option">
-                                        <a href="#" class="size_50ml">50ml</a>
-                                        <a href="#" class="size_100ml">100ml</a>
-                                        <a href="#" class="size_8ml">8ml</a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
                                 </div>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
+                            </li>
+                            <li class="swiper-slide bs_product perfume">
+                                <div class="img">
+                                    <a href="#"><img src="#" alt="Glossier you Fleur"></a>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Boy Brow">
-                                    <div class="color">
-                                        <span class="darkbrown_color chip"></span>
-                                        <span class="brown_color chip"></span>
-                                        <span class="auburn_color chip"></span>
-                                        <span class="blond_color chip"></span>
-                                        <span class="gray_color chip"></span>
-                                        <span class="clear_color chip"></span>
-                                        <span class="black_color chip"></span>
-                                        <p>+2</p>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Glossier you Fleur</h1>
+                                        <p class="product_description">오드퍼퓸</p>
+                                    </a>
+                                    <div>
+                                        <div class="price">
+                                            <a href="#" class="size_50ml">₩ 137,000</a>
+                                            <a href="#" class="size_100ml">₩ 194,000</a>
+                                            <a href="#" class="size_8ml">₩ 53,700</a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="#" class="size_50ml">50ml</a>
+                                            <a href="#" class="size_100ml">100ml</a>
+                                            <a href="#" class="size_8ml">8ml</a>
+                                        </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Boy Brow</h1>
-                                    <p class="product_description">아이브로우</p>
-                                    <div class="price">
-                                        <p>₩ 37,000</p>
-                                        <!-- <del>`원가`</del> -->
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Balm Dotcom">
-                                    <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Balm Dotcom</h1>
-                                    <p class="product_description">립밤</p>
-                                    <div class="price">
-                                        <p>27,000</p>
-                                        <!-- <del>`원가`</del> -->
-                                    </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
+                            </li>
+                            <li class="swiper-slide bs_product perfume">
+                                <div class="img">
+                                    <a href="#"><img src="#" alt="Glossier you Reve"></a>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Lip line">
-                                    <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Glossier you Reve</h1>
+                                        <p class="product_description">오드퍼퓸</p>
+                                    </a>
+                                    <div>
+                                        <div class="price">
+                                            <a href="#" class="size_50ml">₩ 137,000</a>
+                                            <a href="#" class="size_100ml">₩ 194,000</a>
+                                            <a href="#" class="size_8ml">₩ 53,700</a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="#" class="size_50ml">50ml</a>
+                                            <a href="#" class="size_100ml">100ml</a>
+                                            <a href="#" class="size_8ml">8ml</a>
+                                        </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Lip line</h1>
-                                    <p class="product_description">립라이너</p>
-                                    <div class="price">
-                                        <p>₩ 37,000</p>
-                                        <!-- <del>`원가`</del> -->
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Glossier you Fleur Duo">
-                                    <!-- <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div> -->
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Glossier you Fleur Duo</h1>
-                                    <p class="product_description">오드퍼퓸</p>
-                                    <div class="price">
-                                        <p>₩ 148,100</p>
-                                        <del>₩ 198,800</del>
-                                    </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Boy Brow">
+                                        <div class="color">
+                                            <span class="darkbrown_color chip"></span>
+                                            <span class="brown_color chip"></span>
+                                            <span class="auburn_color chip"></span>
+                                            <span class="blond_color chip"></span>
+                                            <span class="gray_color chip"></span>
+                                            <span class="clear_color chip"></span>
+                                            <span class="black_color chip"></span>
+                                            <p>+2</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Three Eyed Smiley Mug">
-                                    <!-- <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div> -->
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Three Eyed Smiley Mug</h1>
-                                    <p class="product_description">머그컵</p>
-                                    <div class="price">
-                                        <p>₩ 30,300</p>
-                                        <!-- <del>₩ 198,800</del> -->
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Boy Brow</h1>
+                                        <p class="product_description">아이브로우</p>
+                                        <div class="price">
+                                            <p>₩ 37,000</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Earbuds Beauty Bag">
-                                    <!-- <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div> -->
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Earbuds Beauty Bag</h1>
-                                    <p class="product_description">한정판 굿즈</p>
-                                    <div class="price">
-                                        <p>₩ 16,800</p>
-                                        <!-- <del>₩ 198,800</del> -->
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Balm Dotcom">
+                                        <div class="color">
+                                            <span class="blackcherry_color chip"></span>
+                                            <span class="esspresso_color chip"></span>
+                                            <span class="birthday_color chip"></span>
+                                            <span class="strawberry_color chip"></span>
+                                            <span class="wildfig_color chip"></span>
+                                            <span class="rose_color chip"></span>
+                                            <span class="coconut_color chip"></span>
+                                            <p>+6</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Balm Dotcom</h1>
+                                        <p class="product_description">립밤</p>
+                                        <div class="price">
+                                            <p>₩ 27,000</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Body Spritz">
-                                    <!-- <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div> -->
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Body Spritz</h1>
-                                    <p class="product_description">바디스프레이</p>
-                                    <div class="price">
-                                        <p>₩ 30,300</p>
-                                        <!-- <del>₩ 198,800</del> -->
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Lip line">
+                                        <div class="color">
+                                            <span class="blackcherry_color chip"></span>
+                                            <span class="esspresso_color chip"></span>
+                                            <span class="birthday_color chip"></span>
+                                            <span class="strawberry_color chip"></span>
+                                            <span class="wildfig_color chip"></span>
+                                            <span class="rose_color chip"></span>
+                                            <span class="coconut_color chip"></span>
+                                            <p>+6</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Lip line</h1>
+                                        <p class="product_description">립라이너</p>
+                                        <div class="price">
+                                            <p>₩ 37,000</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Daliy Oil Wash">
-                                    <!-- <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div> -->
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Daliy Oil Wash</h1>
-                                    <p class="product_description">너리싱 오일 워시</p>
-                                    <div class="price">
-                                        <p>₩ 30,300</p>
-                                        <!-- <del>₩ 198,800</del> -->
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Glossier you Fleur Duo">
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Glossier you Fleur Duo</h1>
+                                        <p class="product_description">오드퍼퓸</p>
+                                        <div class="price">
+                                            <p>₩ 148,100</p>
+                                            <del>₩ 198,800</del>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="bs_product normal">
-                            <div class="img">
-                                <a href="#">
-                                    <img src="#" alt="Body Hero Dry-Touch Oil Mist">
-                                    <!-- <div class="color">
-                                        <span class="blackcherry_color chip"></span>
-                                        <span class="esspresso_color chip"></span>
-                                        <span class="birthday_color chip"></span>
-                                        <span class="strawberry_color chip"></span>
-                                        <span class="wildfig_color chip"></span>
-                                        <span class="rose_color chip"></span>
-                                        <span class="coconut_color chip"></span>
-                                        <p>+6</p>
-                                    </div> -->
-                                </a>
-                            </div>
-                            <div class="product_info">
-                                <a href="#">
-                                    <h1 class="product_name">Body Hero Dry-Touch Oil Mist</h1>
-                                    <p class="product_description">드라이 오일 미스트</p>
-                                    <div class="price">
-                                        <p>₩ 30,300</p>
-                                        <!-- <del>₩ 198,800</del> -->
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Three Eyed Smiley Mug">
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Three Eyed Smiley Mug</h1>
+                                        <p class="product_description">머그컵</p>
+                                        <div class="price">
+                                            <p>₩ 30,300</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
                                     </div>
-                                </a>
-                                <div class="products_icon">
-                                    <button type="button" aria-label="관심상품"></button>
-                                    <button type="button" aria-label="장바구니담기"></button>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Earbuds Beauty Bag">
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Earbuds Beauty Bag</h1>
+                                        <p class="product_description">한정판 굿즈</p>
+                                        <div class="price">
+                                            <p>₩ 16,800</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Body Spritz">
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Body Spritz</h1>
+                                        <p class="product_description">바디스프레이</p>
+                                        <div class="price">
+                                            <p>₩ 30,300</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Daily Oil Wash">
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Daily Oil Wash</h1>
+                                        <p class="product_description">너리싱 오일 워시</p>
+                                        <div class="price">
+                                            <p>₩ 30,300</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide bs_product normal">
+                                <div class="img">
+                                    <a href="#">
+                                        <img src="#" alt="Body Hero Dry-Touch Oil Mist">
+                                    </a>
+                                </div>
+                                <div class="product_info">
+                                    <a href="#">
+                                        <h1 class="product_name">Body Hero Dry-Touch Oil Mist</h1>
+                                        <p class="product_description">드라이 오일 미스트</p>
+                                        <div class="price">
+                                            <p>₩ 30,300</p>
+                                        </div>
+                                    </a>
+                                    <div class="products_icon">
+                                        <button type="button" aria-label="관심상품"></button>
+                                        <button type="button" aria-label="장바구니담기"></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <section id="celeb_pick">
                 <div class="title">
                     <h1>CELEB's PICK</h1>
-                    <a href="#">MORE<img src="" alt="더보기"></a>
+                    <a href="#">MORE<img src="./images/common/more_icon.png" alt="더보기"></a>
                 </div>
                 <div class="content_wrap">
                     <ul class="thumbnail">
@@ -595,7 +662,7 @@
                 </div>
             </section>
             <section id="brand_slogan">
-                <img src="#" alt="나를 위한 가치있는 소비">
+                <img src="./images/common/brand_slogan.jpg" alt="나를 위한 가치있는 소비">
             </section>
             <section id="store_find">
                 <div class="content">

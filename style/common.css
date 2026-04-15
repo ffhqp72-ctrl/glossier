@@ -1,1 +1,556 @@
 /* 메인,서브 디자인 공통용 */
+
+#wrap {}
+#wrap header {position: relative;}
+#wrap header #fix_area {z-index: 999;position: fixed;width:100%;}
+/* =================================================== (아래) 띠배너 */
+#wrap header #fix_area #top_bnr {
+    background-color: #000;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+#wrap header #fix_area #top_bnr .bnr_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#wrap header #fix_area #top_bnr .bnr_wrap > * {
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+#wrap header #fix_area #top_bnr .bnr_wrap p {}
+
+#wrap header #fix_area #top_bnr .bnr_wrap p span,
+#wrap header #fix_area #top_bnr .bnr_wrap p a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+#wrap header #fix_area #top_bnr .bnr_wrap .play_btn {}
+
+#wrap header #fix_area #top_bnr .bnr_wrap .play_btn .prev {}
+
+#wrap header #fix_area #top_bnr .bnr_wrap .play_btn .next {}
+
+#wrap header #fix_area #top_bnr .bnr_wrap .play_btn .toggle-play {}
+
+/* =================================================== (아래) GNB */
+#wrap header #fix_area #gnb {
+    background:linear-gradient(to bottom,rgba(154, 154, 154, 1) 0%,rgba(255, 255, 255, 0) 100%);
+    display:flex;  
+    height:85px;
+    padding:0 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    /* z-index: 999; */
+}
+#wrap header #fix_area #gnb h1 {
+    width:173px;
+    height:auto;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-right:105px;
+}
+#wrap header #fix_area #gnb h1 #logo {}
+#wrap header #fix_area #gnb h1 #logo img {width:100%;}
+
+/* =================================================== (아래) 카테고리 */
+
+#wrap header #fix_area #gnb .category {display: flex;
+    /* width:100%; */
+}
+#gnb .category > li {
+    position: relative;
+}
+
+/* 1depth */
+#gnb .category > li > a {
+    display: block;
+    padding: 30px 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* =================================================== depth 2 */
+
+
+/* =========================
+메가메뉴 (depth2)
+========================= */
+#gnb .depth2 {
+    position: fixed;        
+    top: auto;             
+    left: 0;                
+    width: 100%;           
+    height:436px;
+    background: #fff;
+    padding: 40px 80px;
+
+    display: flex;
+    gap: 60px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* hover 시 노출 */
+#gnb .category > li:hover .depth2 {
+    opacity: 1;
+    visibility: visible;
+    /* transform: translateY(0); */
+}
+
+/* =========================
+   컬럼 (col)
+========================= */
+#gnb .depth2 .col {
+    min-width: 140px;
+    background-color: yellow;
+}
+
+/* =========================
+   카테고리 타이틀
+========================= */
+#gnb .category_title {
+    display: block;
+    font-weight: 700;
+    color: #000;
+}
+
+/* =========================
+   메뉴 리스트
+========================= */
+#gnb .menu_list li a,
+#gnb .depth2 ul li a {
+    display: block;
+    color: #555;
+    padding-top: 20px;
+    transition: color 0.2s;
+}
+
+#gnb .menu_list li a:hover,
+#gnb .depth2 ul li a:hover {
+    color: #000;
+}
+
+/* =========================
+   이미지 영역
+========================= */
+#gnb .category_img {
+    background-color: violet;
+    position: absolute;
+    right:40px;      
+    /* top: 40px;         */
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#gnb .category_img li a {
+    display: block;
+    background-color: rgb(1, 173, 188);
+    
+}
+
+#gnb .category_img img {
+    width: 393px;
+    height: 232px;
+    object-fit: cover;
+    display: block;
+}
+
+#gnb .category_img p {
+    margin-top: 15px;
+    color: #000;
+}
+
+/* =========================
+   BEST / NEW (첫 컬럼)
+========================= */
+#gnb .depth2 .col:first-child ul li a {
+    font-weight: 600;
+    color: #000;
+    padding-right: 120px; 
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+#gnb .category a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+}
+/* =================================================== (아래) 유저 서비스 */
+#wrap header #fix_area #gnb #user_service {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: auto;
+}
+#wrap header #fix_area #gnb #user_service a {width:35px;}
+#wrap header #fix_area #gnb #user_service a img {width: 100%;}
+
+
+/* =================================================== (아래) GNB 호버 디자인 */
+#wrap header #fix_area #gnb:hover {background: #fff; border-bottom:2px solid #d3d3d3;}
+#wrap header #fix_area #gnb:hover h1 a img {
+    content: url('../images/common/Glossier-Logotype-black.png');
+}
+#wrap header #fix_area #gnb:hover .category li a {
+    color: #000;
+}
+#wrap header #fix_area #gnb:hover #user_service a:nth-child(1) img {
+    content: url('../images/common/search_bk_icon.png');
+}
+#wrap header #fix_area #gnb:hover #user_service a:nth-child(2) img {
+    content: url('../images/common/language_bk_icon.png');
+}
+#wrap header #fix_area #gnb:hover #user_service a:nth-child(3) img {
+    content: url('../images/common/map_bk_icon.png');
+}
+#wrap header #fix_area #gnb:hover #user_service a:nth-child(4) img {
+    content: url('../images/common/person_bk_icon.png');
+}
+#wrap header #fix_area #gnb:hover #user_service a:nth-child(5) img {
+    content: url('../images/common/cart_off_bk_icon.png');
+}
+
+#wrap header #hero_bnr {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* video일 경우 */
+    z-index: 1;
+    border: none;
+    pointer-events: none; /* 클릭 막기 */
+}
+
+/* ========================================= 브랜드 정보 */
+
+/* #wrap main {}
+#wrap main #brand_info {}
+#wrap main #brand_info .img {display: flex;
+
+}
+#wrap main #brand_info .img a {
+    width:640px;
+    height:725px;
+}
+#wrap main #brand_info .img a img {
+    width:100%;
+    height: 100%;   
+    object-fit: cover;
+} */
+
+/* ----------------------------------- */
+#wrap main {}
+#wrap main #brand_info {}
+#wrap main #brand_info .img {display: flex;}
+#wrap main #brand_info .img a {
+    width: 640px;
+    height: 725px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+#wrap main #brand_info .img a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#wrap main #brand_info .img a .hover_txt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 6.88rem;
+    font-weight: 600;
+    line-height:1.5;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#wrap main #brand_info .img a:hover img {
+    transform: scale(1.07);
+}
+
+#wrap main #brand_info .img a:hover .hover_txt {
+    opacity: 1;
+}
+
+/* =================================================== 브랜드 인포 슬로건 */
+
+#wrap main #brand_info .slogan {}
+#wrap main #brand_info .slogan dt {
+    text-align: center;
+    padding-top:150px;
+    font-size:1.5rem;
+    line-height:150%;
+    font-weight: 700;
+}
+#wrap main #brand_info .slogan dd {
+    text-align: center;
+    padding-top:25px;
+    font-size:0.75rem;
+    line-height:150%;
+}
+#wrap main #brand_info .slogan dd p {line-height:150%;}
+
+/* ========================================== wear glossier */
+
+#wrap main #wear_glossier {display:flex;
+    justify-content: center;
+    padding:150px 66px;
+    gap:15px;
+}
+#wrap main #wear_glossier img {}
+#wrap main #wear_glossier .contents {display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;}
+
+#wrap main #wear_glossier .contents .products {
+    background-color:#FBFBFB;
+    width:428px;
+    height:480px;
+    padding:20px 15.5px;
+}
+#wrap main #wear_glossier .contents .products a {}
+
+#wrap main #wear_glossier .contents .products a .product_info {
+    text-align: center;
+    margin:15px;
+}
+#wrap main #wear_glossier .contents .products a .product_info h1 {
+    margin-bottom:20px;
+}
+#wrap main #wear_glossier .contents .products a .product_info h2 {
+    margin-bottom:20px;
+}
+#wrap main #wear_glossier .contents .products a .product_info p {
+    display: inline-block;
+    color: #8F071D;
+    border-bottom:1px solid #8F071D ;
+}
+
+#wrap main #wear_glossier .contents .products a {
+    position: relative;
+    display: block;
+}
+
+#wrap main #wear_glossier .contents .products a img {
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+    object-position: center 90%;
+    transition: opacity 0.4s ease;
+}
+
+#wrap main #wear_glossier .contents .products a .img_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    object-fit: cover;
+    object-position: center 50%;
+}
+
+#wrap main #wear_glossier .contents .products:hover a .img_default {
+    opacity: 0;
+}
+
+#wrap main #wear_glossier .contents .products:hover a .img_hover {
+    opacity: 1;
+}
+
+
+/* =========================================== 브랜드 슬로건  */
+#wrap main #brand_slogan {
+    padding:150px;
+    background-color: #000;
+}
+#wrap main #brand_slogan img {width: 100%;}
+
+/* =========================================== 매장 위치  */
+#wrap main #store_find {
+    width:100%;
+    height:591px;
+    background-image:url(../images/common/store.png);
+    display: table;
+}
+#wrap main #store_find .content {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+#wrap main #store_find .content p {color: #fff;
+    font-size:3.00rem;
+    font-weight:600;
+    margin-bottom:64px;
+}
+#wrap main #store_find .content .store_btn {
+    background-color:rgba(26, 26, 26, 0.5) ;
+    color: #fff;
+    padding:14px 47.5px;
+}
+#wrap main #store_find .content .store_btn:hover {
+    background-color:rgba(255, 255, 255, 0.5) ;
+    color: #000;
+    padding:14px 47.5px;
+}
+
+/* ======================= 베스트 셀러 */
+/* ================================ 카테고리 */
+#wrap main #best_seller {
+    gap:18px;
+} 
+#wrap main #best_seller .contents {
+    padding: 0 60px;
+} 
+#wrap main #best_seller .contents .category {
+    display:flex;
+    margin-top:30px;
+    margin-bottom:20px;
+    
+} 
+#wrap main #best_seller .contents .category li {
+    gap: 15px;
+} 
+#wrap main #best_seller .contents .category li a {
+    padding:5px 15px;
+} 
+/* ================================ 상품 */
+#wrap main #best_seller .contents .swiper {}
+#wrap main #best_seller .contents .swiper .swiper-wrapper {
+    width: 360px;
+    padding-bottom: 20px;
+    list-style: none;
+}
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide {}
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide .img {}
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide .img a {}
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide .img a img{}
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide .product_info {}
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide .product_info a {}
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide .product_info > a {
+    display: block;
+    width: 100%;
+    height: 380px;
+    background-color: #F5F0EC;
+}
+
+#wrap main #best_seller .contents .swiper .swiper-wrapper .swiper-slide .product_info > a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+#wrap main #best_seller .contents .products_all .bs_product a {}
+#wrap main #best_seller .contents .products_all .bs_product a img {width:100%
+    ;}
+#wrap main #best_seller .contents .products_all .bs_product .product_info {
+    padding: 0 16px;
+    margin-top: 16px;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info a {}
+#wrap main #best_seller .contents .products_all .bs_product .product_info a .product_name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 6px;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info a .product_description {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+#wrap main #best_seller .contents .products_all .bs_product .product_info div {
+    background-color: violet;
+    margin-bottom:30px;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .price {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .price a {
+    background-color: yellowgreen;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .price .size_50ml {}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .price .size_100ml {}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .price .size_8ml {}
+
+#wrap main .products_all .bs_product .product_info .option {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .option a {font-size: 0.75rem;
+    color: #555;}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .option .size_50ml {}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .option .size_100ml {}
+#wrap main #best_seller .contents .products_all .bs_product .product_info div .option .size_8ml {}
+
+#wrap main #best_seller .contents .products_all .bs_product .product_info .products_icon {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info .products_icon button:nth-child(1) {
+    background-image:url(../images/common/cart_off_bk_icon.png);
+    background-size: cover;
+    width:24px;
+    height:24px;
+}
+#wrap main #best_seller .contents .products_all .bs_product .product_info .products_icon button:nth-child(2) {
+    background-image:url(../images/common/heart1.png);
+    background-size: contain;
+    width:22px;
+    height:22px;
+}
+
+
+/* ======================= 공통 */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 60px 30px 60px;
+    border-bottom:1px solid #D3D3D3;
+}
+.title h1 {
+    font-size: 1.5rem;
+    font-weight:600;
+}
+
+.title a {
+    display: flex;
+    width:70px;
+    justify-content: space-between;
+    align-items: center;
+}
+.title a img {width:25%;
+}
